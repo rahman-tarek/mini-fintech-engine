@@ -11,12 +11,16 @@ class Money
 		std::string currency;
 	
 	public:
-		Money(double amt = 0, std::string curr = "BDT"): amount(amt), currency(curr) {}	
-		
+		Money(double amt = 0, std::string curr = "USD"): amount(amt), currency(curr) {}
+
+
+		// Set amount and currency
 		void setAmount(double amt, std::string curr);
 
+		// Get amount of money
 		double getAmount() const;
 
+		// Get currency
 		std::string getCurrency() const;
 };
 
