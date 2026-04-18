@@ -2,8 +2,6 @@
 #include <string>
 #include "../include/models/money.h"
 #include "../include/models/account.h"
-#include "models/account.cpp"
-#include "models/money.cpp"
 
 
 int main()
