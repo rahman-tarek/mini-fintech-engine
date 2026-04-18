@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MiniFintech.dir/main.cpp.o CMakeFiles/MiniFintech.dir/models/account.cpp.o CMakeFiles/MiniFintech.dir/models/money.cpp.o -o MiniFintech 
