@@ -49,6 +49,12 @@ int main()
 					std::cout << "Account created successfully" << std::endl;
 				}
 			break;
+			case 2:
+				{
+					std::string name;
+					std::cout << "Enter your name: ";
+					std::cin >> name;
+				}
 			case 3:
 			exit(1); // Exit the program if user choice 3
 
