@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "../include/models/money.h"
 #include "../include/models/account.h"
 
@@ -43,9 +44,27 @@ int main()
 				{
 					std::string name;
 					std::cout << "Enter your name: ";
-					std::cin >> name;
 
-					Account acc1(name, Money(0, "USD"));
+					std::cin.ignore(); // Clear the input buffer before reading the name
+					std::getline(std::cin, name); // Read the full name including spaces
+					// getchar(); // Consume the newline character left in the input buffer
+
+					Account acc1(name, Money(0, "USD")); // Create a new account with name and initial balance
+					
+					
+					std::ofstream file("../data/accounts.txt", std::ios::app); // Open the file in write mode
+					
+					if(file.is_open())
+					{
+						std::cout << "File opened" << std::endl;
+						file << acc1.getName() << ": " << acc1.getBalance().getAmount() << acc1.getBalance().getCurrency() << std::endl;
+						file.close(); // Close the file after writing
+					}
+					else
+					{
+						std::cout << "Unable to open file" << std::endl;
+					}
+					
 					std::cout << "Account created successfully" << std::endl;
 				}
 			break;
