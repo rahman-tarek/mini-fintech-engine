@@ -1,1 +1,4 @@
 Tarek,0,USD
+Tarek,0USD
+Tarek: 0USD
+Tarek: 0USD
