@@ -44,7 +44,10 @@ int main()
 				{
 					std::string name;
 					std::cout << "Enter your name: ";
-					std::cin >> name;
+
+					std::cin.ignore(); // Clear the input buffer before reading the name
+					std::getline(std::cin, name); // Read the full name including spaces
+					// getchar(); // Consume the newline character left in the input buffer
 
 					Account acc1(name, Money(0, "USD")); // Create a new account with name and initial balance
 					
